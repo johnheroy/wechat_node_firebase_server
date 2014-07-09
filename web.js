@@ -49,6 +49,13 @@ weixin.eventMsg(function(msg) {
 
 		case "unsubscribe" :
 			currentUserRef.remove();
+			resMsg = {
+				fromUserName : msg.toUserName,
+				toUserName : msg.fromUserName,
+				msgType : "text",
+				content : "",
+				funcFlag : 0
+			};
 			break;
 	}
 
